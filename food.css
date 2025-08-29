@@ -1,0 +1,140 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(40deg,pink,red);
+    font-family: Arial, Helvetica, sans-serif;  
+    margin-right: 0;
+
+}
+header{
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    color: antiquewhite;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 60%;
+    padding: 10px;
+}
+#Menu{
+    display: block;
+    background-color: lightblue;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10%;
+    box-shadow: 0 0 15px black;
+    margin-left: 15px;
+}
+#Menu a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;   
+}
+#Menu a:hover{
+    background-color: gray;
+    color: lightgray;
+    width: 50px;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    margin-left: 10px;
+}
+table{
+    width: 1300%;
+    border-radius: 10%;
+}
+table img{
+    border-radius: 10%;
+    box-shadow: 0 0 20px white;
+}
+.button{
+    background-color: gray;
+    color: lightgray;
+    border: none;
+    font-size: 17px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+#Non-Veg figure{
+box-shadow: 0 0 10px black;
+width: 320px;
+display: inline-block;
+border-radius: 9%;
+}
+#Non-Veg figure img{
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rebeccapurple;
+}
+#Non-Veg figure figcaption{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+#Veg figure{
+box-shadow: 0 0 10px black;
+width: 320px;
+display: inline-block;
+border-radius: 9%;
+}
+#Veg figure img{
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rebeccapurple;
+}
+#Veg figure figcaption{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+#Desserts figure{
+box-shadow: 0 0 10px black;
+width: 320px;
+display: inline-block;
+border-radius: 9%;
+}
+#Desserts figure img{
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rebeccapurple;
+}
+#Desserts figure figcaption{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+#contact h3{
+color: black;
+font-size: 28px;
+text-align: center;
+}
+#contact p{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+#footer{
+    background-color: gray;
+    color: lightgray;
+    text-align: center;
+    margin: 0;
+    
+}
+
+
+
