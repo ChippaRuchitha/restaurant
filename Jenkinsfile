@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Building Docker image..."
-                sh 'docker build -t Restaurant-app .'
+                sh 'docker build -t restaurant-app .'
             }
         }
 
@@ -21,9 +21,9 @@ pipeline {
                 echo "Running Docker container..."
                 // Stop & remove old container if already running
                 sh '''
-                docker stop Restaurant-container || true
-                docker rm Restaurant-container || true
-                docker run -d --name bio-container -p 8086:80 Restaurant-app
+                docker stop restaurant-container || true
+                docker rm restaurant-container || true
+                docker run -d --name restaurant-container -p 8086:80 restaurant-app
                 '''
             }
         }
