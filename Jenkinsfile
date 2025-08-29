@@ -5,7 +5,7 @@ pipeline {
         stage('Clone') {
             steps {
                 echo "Cloning repository..."
-                git branch: 'main', url: 'https://github.com/ChippaRuchitha/Restaurant.git'
+                git branch: 'main', url: 'https://github.com/ChippaRuchitha/restaurant.git'
             }
         }
 
