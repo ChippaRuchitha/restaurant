@@ -7,7 +7,7 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy only html/css/js/images into nginx web folder
 COPY food.html /usr/share/nginx/html/index.html
 COPY foods.css /usr/share/nginx/html/
-COPY restaurant_photos/ /usr/share/nginx/html/images/
+COPY images/ /usr/share/nginx/html/images/
 
 # If you have images or JS, copy the whole project except CI/CD files
 # COPY . /usr/share/nginx/html/
