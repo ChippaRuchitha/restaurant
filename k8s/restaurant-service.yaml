@@ -7,6 +7,7 @@ spec:
     app: restaurant
   ports:
     - protocol: TCP
-      port: 80        # Service port
-      targetPort: 80  # Container port
-  type: NodePort      # Exposes service on <NodeIP>:<NodePort>
+      port: 80
+      targetPort: 80
+      nodePort: 30007   # you can pick any free port between 30000-32767
+  type: NodePort
