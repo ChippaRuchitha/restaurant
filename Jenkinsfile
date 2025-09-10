@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'dockerhub-cred'    // Jenkins credentials ID for Docker Hub
-        DOCKERHUB_REPO = 'ruchitha1318/restaurant' // Your Docker Hub repo name
+        DOCKERHUB_REPO = 'ruchitha1318/restaurant'  // Your Docker Hub repo name
         IMAGE_TAG = "latest"                        // Or use "${env.BUILD_NUMBER}"
         KUBECONFIG_CREDENTIALS = 'kubeconfig'       // Jenkins credentials ID for kubeconfig file
     }
@@ -19,7 +19,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "🐳 Building Docker image..."
-                sh "docker build -t ${DOCKERHUB_REPO}:${IMAGE_TAG} ."
+                withCredentials([usernamePassword(credentialsId: "${DOCKERHUB_CREDENTIALS}", 
+                                                 usernameVariable: 'DOCKER_USER', 
+                                                 passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                        docker build -t ${DOCKER_USER}/restaurant:${IMAGE_TAG} .
+                    '''
+                }
             }
         }
 
